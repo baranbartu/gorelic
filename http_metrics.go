@@ -5,6 +5,7 @@ import (
 	"github.com/yvasiyarov/newrelic_platform_go"
 	"net/http"
 	"time"
+	"fmt"
 )
 
 type tHTTPHandlerFunc func(http.ResponseWriter, *http.Request)
@@ -139,4 +140,8 @@ func addHTTPMericsToComponent(component newrelic_platform_go.IComponent, timer m
 		},
 	}
 	component.AddMetrica(responseTimePercentile95)
+}
+
+func SomePublicFunction() {
+	fmt.Println("Hello Gizem")
 }
